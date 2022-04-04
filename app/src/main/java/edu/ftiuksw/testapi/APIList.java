@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.Query;
 
 public interface APIList {
@@ -11,4 +12,7 @@ public interface APIList {
     @GET("mahasiswa")
     Call<ArrayList<Mahasiswa>> getAllMahasiswa();
 
+    @Headers({"Accept: application/json"})
+    @GET("mahasiswa")
+    Call<ArrayList<Mahasiswa>> getMahasiswaByNIM(@Query("nim") String nim);
 }

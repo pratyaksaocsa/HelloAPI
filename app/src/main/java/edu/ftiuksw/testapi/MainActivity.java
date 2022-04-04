@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     public void GetDataFromServer(View v) {
         APIList apis = RetrofitClient.getRetrofitClient().create(APIList.class);
         Call<ArrayList<Mahasiswa>> call = apis.getAllMahasiswa();
+        /*//Use this code instead when you want to create a request with header & parameter
+        Call<ArrayList<Mahasiswa>> call = apis.getMahasiswaByNIM("992017547");
+        * */
         call.enqueue(new Callback<ArrayList<Mahasiswa>>() {
             @Override
             public void onResponse(Call<ArrayList<Mahasiswa>> call, Response<ArrayList<Mahasiswa>> response) {
