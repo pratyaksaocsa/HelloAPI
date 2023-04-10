@@ -8,11 +8,6 @@ import retrofit2.http.Headers;
 import retrofit2.http.Query;
 
 public interface APIList {
-
-    @GET("mahasiswa")
-    Call<ArrayList<Mahasiswa>> getAllMahasiswa();
-
-    @Headers({"Accept: application/json"})
-    @GET("mahasiswa")
-    Call<ArrayList<Mahasiswa>> getMahasiswaByNIM(@Query("nim") String nim);
+    @GET("products")
+    Call<Products> getAllProduct();
 }

@@ -4,10 +4,10 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btnGetData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Me!"
-        android:onClick="GetDataFromServer"/>
+        android:text="Click Me!"/>
 
     <TextView
         android:id="@+id/txtNama"
